@@ -30,17 +30,18 @@ $products = [
   <h1>Shop</h1>
   <!-- LISTA PRODOTTI -->
   <ul>
-    <li <?php foreach ($products as $product) : ?>>
-      <!-- NOME PRODOTTO -->
-      <h2><?= $product->getTitle(); ?></h2>
-      <!-- PREZZO -->
-      <p>Prezzo: <?= $product->getPrice(); ?>€</p>
-      <!-- CATEGORIA -->
-      <p>Categoria: <?= $product->getCategory()->getName(); ?></p>
-      <!-- TIPO -->
-      <p>Tipo: <?= $product->getType(); ?></p>
-    <?php endforeach; ?>
-    </li>
+    <?php foreach ($products as $product) : ?>
+      <li>
+        <!-- NOME PRODOTTO -->
+        <h2><?= $product->getTitle(); ?></h2>
+        <!-- PREZZO -->
+        <p>Prezzo: <?= $product->getPrice(); ?>€</p>
+        <!-- CATEGORIA -->
+        <p>Categoria: <?= $product->getCategory()->getName(); ?></p>
+        <!-- TIPO -->
+        <p>Tipo: <?= $product->getType(); ?></p>
+      <?php endforeach; ?>
+      </li>
   </ul>
 </body>
 
