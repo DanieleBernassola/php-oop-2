@@ -14,6 +14,8 @@ $catCategory = new Category("Gatti");
 // CREAZIONE PRODOTTI
 $products = [
   new Food("Croccantini per cani", 20, $dogCategory),
+  new Game("Giocattolo per gatti", 5, $catCategory),
+  new Kennel("Cuccia per cani", 45, $dogCategory),
 ];
 ?>
 
