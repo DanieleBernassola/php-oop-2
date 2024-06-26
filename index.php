@@ -1,5 +1,18 @@
 <?php
 
+// INCLUSIONE CLASSI
+require_once __DIR__ . '/Models/Product.php';
+require_once __DIR__ . '/Models/Category.php';
+require_once __DIR__ . '/Models/Food.php';
+require_once __DIR__ . '/Models/Game.php';
+require_once __DIR__ . '/Models/Kennel.php';
+
+// CREAZIONE CATEGORIE
+$dogCategory = new Category("Cani");
+$catCategory = new Category("Gatti");
+
+var_dump($dogCategory);
+var_dump($catCategory);
 ?>
 
 <!DOCTYPE html>
