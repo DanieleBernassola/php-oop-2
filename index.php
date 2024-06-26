@@ -11,8 +11,10 @@ require_once __DIR__ . '/Models/Kennel.php';
 $dogCategory = new Category("Cani");
 $catCategory = new Category("Gatti");
 
-var_dump($dogCategory);
-var_dump($catCategory);
+// CREAZIONE PRODOTTI
+$products = [
+  new Food("Croccantini per cani", 20, $dogCategory),
+];
 ?>
 
 <!DOCTYPE html>
@@ -26,6 +28,20 @@ var_dump($catCategory);
 
 <body>
   <h1>Shop</h1>
+  <!-- LISTA PRODOTTI -->
+  <ul>
+    <li <?php foreach ($products as $product) : ?>>
+      <!-- NOME PRODOTTO -->
+      <h2><?= $product->getTitle(); ?></h2>
+      <!-- PREZZO -->
+      <p>Prezzo: <?= $product->getPrice(); ?>€</p>
+      <!-- CATEGORIA -->
+      <p>Categoria: <?= $product->getCategory()->getName(); ?></p>
+      <!-- TIPO -->
+      <p>Tipo: <?= $product->getType(); ?></p>
+    <?php endforeach; ?>
+    </li>
+  </ul>
 </body>
 
 </html>
